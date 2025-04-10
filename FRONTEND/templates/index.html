@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Cancer</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="/static/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="/static/css/meyawo.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Lung Cancer Prediction</a>         
+            <ul class="nav">
+                {% block navbar %}
+                    <li class="item">
+                        <a class="link active" href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="{{url_for('register')}}">Register</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="{{url_for('login')}}">LogIn</a>
+                    </li>
+                {% endblock %}
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        {% block content %}
+            <div class="overlay"></div>
+            <div class="header-content container" style="text-align: center; padding: 20px;">
+                <p class="header-subtitle"></p>
+                <h1 class="header-title" style="font-weight: bold; color: black; font-size: 36px;">
+                    <span class="down">Ensemble Learning Strategies</span>
+                </h1>
+                
+                <a href="{{url_for('register')}}" class="btn btn-primary" style="color: white; width: 150px; margin: 10px;">Register</a>
+                <a href="{{url_for('login')}}" class="btn btn-primary" style="color: white; width: 150px; margin: 10px;">Log In</a>
+            </div>   
+        {% endblock %}
+         
+    </header>
+
+    {% if message %}
+        <script>
+        alert("{{ message }}")        
+        </script>
+    {% endif %}
+    
+	
+	<!-- core  -->
+    <script src="/static/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="/static/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="/static/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="/static/js/meyawo.js"></script>
+
+</body>
+</html>

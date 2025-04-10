@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <li class="item">
+        <a class="link" href="{{url_for('index')}}">Home</a>
+    </li>
+    <li class="item">
+        <a class="link active" href="{{url_for('register')}}">Register</a>
+    </li>
+    <li class="item">
+        <a class="link" href="{{url_for('login')}}">LogIn</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <section class="section" id="contact">
+        <div style="background-color:white; width: 900px;" class="container text-center">
+            <h1></h1><br>
+            <h6 class="section-title mb-5">Registration</h6>
+            <!-- contact form -->
+            <form action="{{url_for('register')}}" method="post" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <input type="text" size="50" class="form-control" name="name" placeholder="User Name" required>                 
+                    </div>
+
+                    <div class="form-group col-12">
+                        <input type="email" class="form-control" name="email" placeholder="Email ID"requried>                 
+                    </div>
+
+                    <div class="form-group col-12">
+                        <input type="password" class="form-control" name="password" placeholder="Password"requried>                 
+                    </div>
+
+                    <div class="form-group col-12">
+                        <input type="password" class="form-control" name="c_password" placeholder="Confirm password"requried>                 
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input style="width: 550px;" type="submit" value="Submit" class="btn btn-outline-primary rounded"> <br><br>                 
+                    </div>
+                </div>  
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+      
+{% endblock %} 
