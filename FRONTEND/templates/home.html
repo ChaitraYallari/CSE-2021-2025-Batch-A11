@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <li class="item">
+        <a class="link active" href="{{url_for('home')}}">Home</a>
+    </li>
+    <li class="item">
+        <a class="link" href="{{url_for('about')}}">About</a>
+    </li>
+    <li class="item">
+        <a class="link" href="{{url_for('upload')}}">Upload</a>
+    </li>
+    <li class="item">
+        <a class="link" href="{{url_for('index')}}">Logout</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="header-content container" style="text-align: center; padding: 20px;">
+        <p class="header-subtitle" style="font-weight: bold; color: black; font-size: 20px;">
+            Ensemble Learning Techniques <br>To
+        </p>
+        <h1 class="header-title" style="font-weight: bold; color: black; font-size: 36px;">
+            <span class="down">Detect Lung Cancer</span>
+        </h1>
+    </div>
+       
+{% endblock %} 

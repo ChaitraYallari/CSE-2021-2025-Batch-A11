@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <li class="item">
+        <a class="link" href="{{url_for('home')}}">Home</a>
+    </li>
+    <li class="item">
+        <a class="link active" href="{{url_for('about')}}">About</a>
+    </li>
+    <li class="item">
+        <a class="link" href="{{url_for('upload')}}">Upload</a>
+    </li>
+    <li class="item">
+        <a class="link" href="{{url_for('index')}}">Logout</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <section style="margin-top: 100px;" class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="/static/imgs/lung.webp" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="about-caption">
+                    <h2 class="section-title mb-3" style="font-weight: bold; color: black;">About</h2>
+                    <p style="font-weight: bold; color: black;">
+                        Lung cancer detection using histopathology images plays a crucial role in early diagnosis and treatment planning. Our AI-powered system leverages deep learning to analyze microscopic tissue samples, identifying cancerous cells with high precision. By automating the detection process, we assist pathologists in making faster and more accurate diagnoses, reducing human error and improving patient outcomes. The system enhances traditional histopathological examination by detecting patterns and anomalies that may be challenging to identify manually. With advanced image processing and machine learning techniques, our solution aims to revolutionize lung cancer diagnosis, enabling timely intervention and better treatment strategies for patients.
+                    </p>
+                </div>
+                              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> 
+{% endblock %} 

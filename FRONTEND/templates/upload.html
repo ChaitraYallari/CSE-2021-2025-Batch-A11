@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <section class="section" id="contact">
+        <div style="background-color:white; width: 900px;" class="container text-center">
+            <h1></h1><br>
+            <h6 class="section-title mb-5">Upload a Histopathology Image of Lung Cancer</h6>
+            {% if prediction_result %}
+            <h2 style="color: green;">Predicted cancer: {{ prediction_result['prediction'] }}</h2>
+            <img src="data:image/jpeg;base64,{{ prediction_result['image'] }}" height="200px" width="300px" alt="Uploaded Image">
+            {% endif %}
+            <!-- contact form -->
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <input style="height: 45px;" type="file" class="form-control" name="file" required>                 
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input style="width: 550px;" type="submit" value="Submit" class="btn btn-outline-primary rounded"> <br><br>                 
+                    </div>
+                </div>  
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section> 
+{% endblock %}
